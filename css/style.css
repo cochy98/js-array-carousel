@@ -24,14 +24,29 @@
     width: 60%;
 }
 
-.carousel-thubnails>.my-img-thub{
+.img-thub{
     width: 100%;
     height: calc(100% / 5);
-    object-fit: cover;
 }
 
-.carousel-thubnails>.my-img-thub.active{
+.img-thub>.my-img-thub{
+    width: 100%;
+    height: 100%;
+}
+
+.img-thub>.layover{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .7);
+}
+
+.img-thub>.my-img-thub.active{
 	border: 3px solid white;
+}
+
+#previous,
+#next{
+    z-index: 1;
 }
 
 /* Stile icone up/down */

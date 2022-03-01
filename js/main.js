@@ -40,7 +40,11 @@ for (let i = 0 ; i < items.length ; i++){
         </div>
     </div>`;
 
-    newCarouselImgThub += `<img src="${items[i]}" class="my-img-thub" alt="thubnails photo">`;
+    newCarouselImgThub += `
+    <div class="img-thub position-relative">
+        <div class="layover position-absolute top-0"></div>
+        <img src="${items[i]}" class="my-img-thub" alt="thubnails photo">
+    </div>`;
 }
 
 // Inserisco dinamicamente i singoli elementi all'interno del contenitore generale 'my-carousel'
@@ -56,27 +60,38 @@ thubnailsWrapper.innerHTML += newCarouselImgThub;
 const carouselElements = document.getElementsByClassName('carousel-element');
 const thubnailsImg = document.getElementsByClassName('my-img-thub');
 
+// Richiamo il div 'layover' per poterlo rimuovere sull'immagine attiva
+const layover = document.getElementsByClassName('layover');
+console.log(layover);
+
 // carouselElements è un array a tutti gli effetti, con gli indici possiamo aggiungere la classe active al primo elemento
 carouselElements[0].classList.add('active');
 thubnailsImg[0].classList.add('active');
+
+// Aggiungo la classe per rimuovere il layover
+layover[0].classList.add('d-none');
 
 let count = 0;
 const nextButton = document.getElementById('next');
 nextButton.addEventListener('click', function(){
     carouselElements[count].classList.remove('active');
     thubnailsImg[count].classList.remove('active');
+    layover[count].classList.remove('d-none');
 
     count ++;
     carouselElements[count].classList.add('active');
     thubnailsImg[count].classList.add('active');
+    layover[count].classList.add('d-none');
 });
 
 const previousButton = document.getElementById('previous');
 previousButton.addEventListener('click', function(){
     carouselElements[count].classList.remove('active');
     thubnailsImg[count].classList.remove('active');
+    layover[count].classList.remove('d-none');
 
     count --;
     carouselElements[count].classList.add('active');
     thubnailsImg[count].classList.add('active');
+    layover[count].classList.add('d-none');
 });
