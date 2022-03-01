@@ -6,6 +6,7 @@
 
 .carousel-element{
     display: none;
+    position: relative;
 }
 
 .carousel-element.active{
@@ -17,6 +18,10 @@
     width: 100%;
 	height: 100%;
     object-fit: cover;
+}
+
+.carousel-element>.carousel-img-description{
+    width: 60%;
 }
 
 .carousel-thubnails>.my-img-thub{
