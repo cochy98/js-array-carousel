@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Font-Awesome cdn -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 
     <!-- Bootstrap 5.1 -->
@@ -21,6 +21,48 @@
 <body>
 
     <main>
+        <div class="container my-5">
+            <div class="row position-relative">
+                <div class="col-10 p-0">
+                    <div class="carousel-element position-relative">
+                        <img src="img/01.jpg" class="my-img-carousel" alt="thubnails photo">
+                        <div class="carousel-img-description position-absolute bottom-0 text-end text-white p-4">
+                            <h3>Svizzera</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi expedita unde nam necessitatibus voluptatum molestiae recusandae aliquid consectetur tempore? Suscipit, dolor! Tenetur dolorum est quod voluptatum doloremque porro officia distinctio!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="carousel-element active position-relative">
+                        <img src="img/02.jpg" class="my-img-carousel" alt="thubnails photo">
+                        <div class="carousel-img-description position-absolute bottom-0 text-end text-white p-4">
+                            <h3>Svizzera</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi expedita unde nam necessitatibus voluptatum molestiae recusandae aliquid consectetur tempore? Suscipit, dolor! Tenetur dolorum est quod voluptatum doloremque porro officia distinctio!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2 p-0">
+                    <div class="carousel-thubnails position-relative">
+                        <img src="img/01.jpg" class="my-img-thub" alt="thubnails photo">
+                        <img src="img/02.jpg" class="my-img-thub active" alt="thubnails photo">
+                        <img src="img/03.jpg" class="my-img-thub" alt="thubnails photo">
+                        <img src="img/04.jpg" class="my-img-thub" alt="thubnails photo">
+                        <img src="img/05.jpg" class="my-img-thub" alt="thubnails photo">
+
+                        <!-- Pulsanti previous/next -->
+                        <div class="previous position-absolute top-0 start-50 translate-middle-x">
+                            <i class="fa-solid fa-angle-up my-2"></i>
+                        </div>
+                        <div class="next position-absolute bottom-0 start-50 translate-middle-x">
+                            <i class="fa-solid fa-angle-down my-2"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </main>
 
 

@@ -1,0 +1,41 @@
+.carousel-element,
+.carousel-thubnails{
+    width: 100%;
+    height: 600px;
+}
+
+.carousel-element{
+    display: none;
+}
+
+.carousel-element.active{
+    display: block;
+}
+
+
+.carousel-element>.my-img-carousel{
+    width: 100%;
+	height: 100%;
+    object-fit: cover;
+}
+
+.carousel-thubnails>.my-img-thub{
+    width: 100%;
+    height: calc(100% / 5);
+    object-fit: cover;
+}
+
+.carousel-thubnails>.my-img-thub.active{
+	border: 3px solid white;
+}
+
+/* Stile icone up/down */
+.fa-solid{
+	width: 50px;
+	height: 50px;
+	background-color: gray;
+	text-align: center;
+	line-height: 50px;
+	font-size: 2.3rem;
+	border-radius: 50%;
+}
