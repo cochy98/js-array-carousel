@@ -33,9 +33,11 @@
 .fa-solid{
 	width: 50px;
 	height: 50px;
-	background-color: gray;
 	text-align: center;
 	line-height: 50px;
 	font-size: 2.3rem;
 	border-radius: 50%;
+    background-color: rgb(229, 229, 229);
+    opacity: .6;
+    cursor: pointer;
 }
