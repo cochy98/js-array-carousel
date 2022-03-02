@@ -41,7 +41,7 @@
 }
 
 .img-thub>.my-img-thub.active{
-	border: 3px solid white;
+	border: 3px solid rgb(223, 215, 215);
 }
 
 #previous,

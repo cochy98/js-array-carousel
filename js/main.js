@@ -64,34 +64,45 @@ const thubnailsImg = document.getElementsByClassName('my-img-thub');
 const layover = document.getElementsByClassName('layover');
 console.log(layover);
 
+
+let activeElement = 1;
 // carouselElements è un array a tutti gli effetti, con gli indici possiamo aggiungere la classe active al primo elemento
-carouselElements[0].classList.add('active');
-thubnailsImg[0].classList.add('active');
+carouselElements[activeElement].classList.add('active');
+thubnailsImg[activeElement].classList.add('active');
 
 // Aggiungo la classe per rimuovere il layover
-layover[0].classList.add('d-none');
+layover[activeElement].classList.add('d-none');
 
-let count = 0;
 const nextButton = document.getElementById('next');
 nextButton.addEventListener('click', function(){
-    carouselElements[count].classList.remove('active');
-    thubnailsImg[count].classList.remove('active');
-    layover[count].classList.remove('d-none');
+    carouselElements[activeElement].classList.remove('active');
+    thubnailsImg[activeElement].classList.remove('active');
+    layover[activeElement].classList.remove('d-none');
 
-    count ++;
-    carouselElements[count].classList.add('active');
-    thubnailsImg[count].classList.add('active');
-    layover[count].classList.add('d-none');
+    if (activeElement === items.length - 1){
+        activeElement = 0;
+    } else {
+        activeElement ++;
+    }
+
+    carouselElements[activeElement].classList.add('active');
+    thubnailsImg[activeElement].classList.add('active');
+    layover[activeElement].classList.add('d-none');
 });
 
 const previousButton = document.getElementById('previous');
 previousButton.addEventListener('click', function(){
-    carouselElements[count].classList.remove('active');
-    thubnailsImg[count].classList.remove('active');
-    layover[count].classList.remove('d-none');
+    carouselElements[activeElement].classList.remove('active');
+    thubnailsImg[activeElement].classList.remove('active');
+    layover[activeElement].classList.remove('d-none');
 
-    count --;
-    carouselElements[count].classList.add('active');
-    thubnailsImg[count].classList.add('active');
-    layover[count].classList.add('d-none');
+    if (activeElement === 0){
+        activeElement = items.length - 1;
+    } else {
+        activeElement --;
+    }
+
+    carouselElements[activeElement].classList.add('active');
+    thubnailsImg[activeElement].classList.add('active');
+    layover[activeElement].classList.add('d-none');
 });
